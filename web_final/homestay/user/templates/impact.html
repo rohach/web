@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Experiences</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .womens{
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+        font-size: 20px;
+        font-family: Arial;
+    }
+    .womens1{
+        font-size: 17px;
+    }
+    .first{
+        /*background-color: gainsboro;*/
+    }
+    .impact{
+        /*text-align: center;*/
+        font-size: 40px;
+    }
+    .roadmap{
+        /*text-align: center;*/
+        font-size: 40px;
+        margin-top: 150px;
+    }
+    .icons{
+        width: 40%;
+        height: 45px;
+        margin-left: 30% !important;
+        filter: brightness(0%);
+    }
+    .icons:hover{
+        filter: brightness(100%);
+        transition: .2s;
+    }
+</style>
+
+
+<div class="container-fluid womens bg-light">
+    <b>What does <span style="color: orange"> women's empowerment</span> mean for the communities?<br></b>
+    <span class="womens1">When we say we support women empowerment in Nepal,<br>
+    what does this mean exactly? Most of the Homestay <br>
+    owners are women and housewives. The CommunityHomestay.com <br>
+    platform enables women and their families in local communities <br>
+    all over Nepal to generate a sustainable livelihood from responsible <br>
+    tourism. We are coaching these women in Homestay Management, Hospitality,<br>
+    Basic English and we are providing training in many other areas such as <br>
+    teaching them how to interact with their foreign guests and exchange their <br>
+    ideas and culture with visitors.</span>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="impact mt-lg-5">
+            Our <span style="color: orange">Impacts.</span>
+        </div>
+        <img src="{% static 'images/impact2.jpg' %}" class="img-fluid mt-lg-3">
+    </div>
+</div>
+<div class="bg-light">
+    <div class="container bg-light">
+            <div class="roadmap">
+                Impact <span style="color: orange">RoadMap.</span>
+            </div>
+            <img src="{% static 'images/roadmap.jpg' %}" class="img-fluid mt-lg-3">
+    </div>
+</div>
+
+<div class="container-fluid first">
+<div class="container mt-lg-5">
+    <div style="font-size: 30px">
+        Our Impact<span style="color: orange"> Partners.</span>
+    </div>
+    <br>
+    <div class="row mt-lg-3">
+        <span class="col-md-4">
+           <a href="#"> <img src="{% static 'images/boo.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-4">
+            <a href="#"><img src="{% static 'images/b.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-4">
+            <a href="#"><img src="{% static 'images/f.png' %}" class="icons"></a>
+        </span>
+    </div>
+</div>
+</div>
+
+{% endblock %}

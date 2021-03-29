@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        {{section.title}}
+    {% endblock %}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="{% static 'css/style.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'css/font-awasome.min.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'css/iconicons.min.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet"
+          href="{% static 'js/bootstrap.js/bootstrap.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery.magnific-popup.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery.stellar.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery.waypoints.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery-3.2.1.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery-3.2.1.slim.min.js'%}">
+    <link rel="stylesheet"
+          href="{% static 'js\jquery-migrate-3.0.0.js'%}">
+    <link rel="stylesheet"
+              href="{% static 'js\magnific-popup-options.js'%}">
+
+</head>
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light navigation">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/"><b style="color: purple; font-family: Comic Sans MS">NEP <span style="color: red; font-family: Comic Sans MS "> STAY </span></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+<!--          <li class="nav-item">-->
+<!--              <a class="nav-link logo" href="#"><img src="{% static 'images/logo.png' %}"></a>-->
+<!--          </li>-->
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="#">Booking</a>
+          </li>
+          <li class="nav-item {{activate_experiences}}">
+              <a class="nav-link" href="{% url 'experiences' %}">Experiences</a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="{% url 'impact' %}">Impacts</a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+          <li  class="nav-item btns">
+              <a class="nav-link" href="#">Sign-in</a>
+          </li>
+          <li  class="nav-item btns">
+              <a class="nav-link" href="#">Sign-up</a>
+          </li>
+        </ul>
+     </div>
+    </nav>
+
+
+
+
+
+    <!--  main content  -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+
+
+
+    <!--  footer  -->
+    <footer>
+    <div class="container foot last">
+            <div class="row">
+                <span class="col-md-4 ">
+                     <ul class="first-div text-justify">
+                        <li><h3><b style="color: white">COMPANY</b></h3></li>
+                         <li><a href="#">About US</a></li>
+                         <li><a href="#">Impact Report</a></li>
+                         <li><a href="#">Why Host</a></li>
+                         <li><a href="#">Volunteer with us</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">Contact</a></li>
+                    </ul>
+                    </span>
+                </span>
+                <span class="col-md-4 ">
+                    <ul class="second-div text-justify">
+                        <li><h3 style="color: white">Discover</h3></li>
+                        <li> <a href="#">Homestays</a></li>
+                        <li><a href="#">Experiences</a></li>
+                        <li><a href="#">Circuits</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </span>
+                    <span class="col-md-4 ">
+                    <ul class="third-div text-justify">
+                        <li><h3 style="color: white">CONNECT</h3></li>
+                        <li class="fa fa-map-marker"> Kamane-7, Hetauda <br> 44100</li><br>
+                        <li class="fa fa-phone"> +977-01-4455116 <br>
+                            9868828760 </li>
+                        <li>For further more details, please visit <br>
+                        <a href="#">info@nepstay.com</a></li>
+                    </ul>
+                </span>
+                <div class="col-md-3 ">
+                    <ul class="fourth-div text-justify">
+                        <li><h3 style="color: white">Contact us</h3></li>
+                        <span class="fab fa-facebook mr-4 icons" style="color: blue">  </span>
+                        <span class="fab fa-instagram mr-4 icons" style="color: pink">  </span>
+                        <span class="fab fa-youtube mr-4 icons" style="color: red">  </span>
+                        <span class="fab fa-twitter mr-4 icons" style="color: skyblue">  </span>
+                    </ul>
+                </div>
+
+       </div>
+    </div>
+    </footer>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

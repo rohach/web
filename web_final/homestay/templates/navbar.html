@@ -1,0 +1,66 @@
+<head>
+    <style>
+        .logo{
+            height: 5px;
+            width: 5px;
+        }
+        .navigation{
+            background-color: orange !important;
+        }
+        .navbar{
+            font-weight: bold;
+        }
+        .btns{
+            border: 2px solid;
+            border-color: saddlebrown;
+            border-radius: 25px;
+            padding-left: 30px;;
+            padding-right: 30px;
+        }
+        .btns:hover{
+            background-color: #92CD00;
+            border-color: saddlebrown;
+            transition: .3s;
+            color: white;
+        }
+    </style>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <nav class="navbar navbar-expand-lg navbar-light navigation">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/"><b style="color: purple; font-family: Comic Sans MS">NEP <span style="color: red; font-family: Comic Sans MS "> STAY </span></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+<!--          <li class="nav-item">-->
+<!--              <a class="nav-link logo" href="#"><img src="{% static 'images/logo.png' %}"></a>-->
+<!--          </li>-->
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="#">Booking</a>
+          </li>
+          <li class="nav-item {{activate_experiences}}">
+              <a class="nav-link" href="{% url 'experiences' %}">Experiences</a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="{% url 'impact' %}">Impacts</a>
+          </li>
+          <li  class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+          <li  class="nav-item btns">
+              <a class="nav-link" href="#">Sign-in</a>
+          </li>
+          <li  class="nav-item btns">
+              <a class="nav-link" href="#">Sign-up</a>
+          </li>
+        </ul>
+     </div>
+    </nav>
+
+

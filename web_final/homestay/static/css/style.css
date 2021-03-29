@@ -1,0 +1,91 @@
+/*.rohan{*/
+/*    background-color: #e8f4f7;*/
+/*    color: #c3e6cb;*/
+/*}*/
+.travel{
+    background-color: #1fa12e;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.main_image{
+    width: 100% !important;
+    filter: brightness(45%);
+    object-fit: fill;
+    padding: 0 0 0 0 !important;
+}
+.impacts{
+    color: gray;
+    font-size: 15px;
+}
+.first {
+        background-color: gainsboro !important;
+        width: 100%;
+}
+.first-part {
+    margin-top: 80px;
+}
+.images{
+    border-radius: 15px;
+}
+img:hover{
+    filter: brightness(70%);
+    transition: .5s;
+}
+.icons{
+    width: 80%;
+    height: 45px;
+    filter: brightness(0%);
+}
+.icons:hover{
+    filter: brightness(100%);
+    transition: .2s;
+}
+.foot{
+        margin-top: 50px;
+        padding: 20px;
+}
+ul{
+    list-style: none;
+    padding: 5px;
+}
+.last{
+    background-color: black;
+    color: #95999c;
+    font-family: Arial;
+}
+ul li a{
+    text-decoration: none !important;
+    color: lightgray;
+    list-style: none;
+}
+ul li a:hover{
+    color: white;
+}
+.icons{
+    filter: brightness(65%);
+}
+.icons:hover{
+    transition: .2s;
+    filter: brightness(100%);
+}
+.icons a{
+    text-decoration: none;
+}
+.icns{
+    text-align: center;
+}
+
+body {
+    /*background-color: #7B1FA2;*/
+}
+.images{
+height: 80vh;
+}
+.imagess{
+    border-radius: 20px;
+}
+.imagess:hover{
+    filter: brightness(70%);
+    transition: .5s;
+}

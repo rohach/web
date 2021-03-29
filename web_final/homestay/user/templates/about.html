@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Experiences</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .us{
+        margin-top: 50px;
+    }
+    .book{
+        margin-top: 50px;
+    }
+    .namaste {
+        size: A3;
+        height: 65vh;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p{
+        font-size: 20px;
+    }
+    @keyframes blink {
+        50%{
+            opacity: 0;
+        }
+        80%{
+            opacity: .5;
+        }
+    }
+    .all{
+        text-align: center;
+        font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+        font-size: 50px;
+        animation: blink 2s linear infinite;
+        font-weight: bold;
+        color: gray;
+    }
+    .div{
+        margin-top: 45px;
+    }
+</style>
+
+<div class="container-fluid all ">
+   <i class="fas fa-handshake" aria-hidden="true"></i> WE ARE ALL BECAUSE OF YOURS. <i class="fas fa-handshake" aria-hidden="true"></i>
+</div>
+
+    <div class="container div">
+        <h2>Welcome <span style="color: orange">Home</span></h2>
+        <p>
+            Feel at home in your community homestay in Nepal, where you will <br>
+            experience genuine local hospitality and learn about the <br>
+            real Nepal while leaving behind a positive impact.
+        </p>
+    <div class="container-fluid">
+        <img src="{% static 'images/n.jpg' %}" class="namaste">
+    </div>
+
+
+
+
+    <div class="container-fluid bg-light div" style="text-align: center">
+        <span class="us" style="font-size: 50px">Who we <span style="color: orange; font-size: 50px"> are?</span> </span><br>
+        <span style="font-size:
+        17px">Nepal Stay (Nep-Stay), is a social enterprise that supports a network of <br>
+        community homestays in Nepal. We connect travelers with Communities across Nepal, providing <br>
+        a unique opportunity to stay with Nepali families and immerse in real Nepali life. At the same time, <br>
+        local communities get the opportunity to share their culture and landscapes with the world while gaining <br>
+        access to a sustainable source of income through tourism. The authentic experiences we offer travelers are <br>
+        created with the goal of having a positive impact on Nepali communities, women and families, as well as on the
+        <br> travelers themselves.
+       </span>
+
+
+
+    <div class="container-fluid book bg-light " style="text-align: center">
+        <span class="us" style="font-size: 50px">When You <span style="color: orange; font-size: 50px"> Book</span> </span><br>
+        <span style="font-size: 17px">At Community Homestay Network, we serve as the liaison between travelers and the communities of Nepal. <br>
+
+        Once you book your homestay or experience with us, we coordinate with the communities and families and <br>
+        help you to arrange all your logistics to get there. <br>
+
+        When you arrive at your homestay, the host family welcomes <br>
+        you as a special guest, like a friend and a member of their family. <br>
+
+        During your stay with your host family, there are many ways you can get <br>
+        involved in their daily lives. From cooking local dishes, exploring the surroundings <br>
+        of the community, participating in local festivals, learning local crafts and helping out with daily work. <br>
+        There’s no better way to experience and learn about Nepali culture and life and to share your own <br>
+        culture and ideas too. Discover new perspectives, get inspired, inspire, and make your time in Nepal <br>
+        memorable! Check out our Blog, to read about the community experiences of past travelers.
+        </span>
+        <div class="div">
+            <span style="font-size: 50px">How it <span style="color: orange; font-size: 50px">Works</span></span><br>
+            <img src="{% static 'images/works.jpg' %}" class="img-fluid mt-2">
+        </div>
+     </div>
+</div>
+
+{% endblock %}

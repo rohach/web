@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Experiences</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .first {
+        background-color: gainsboro !important;
+        width: 100%;
+    }
+    .first-part {
+        margin-top: 80px;
+    }
+    .images{
+        border-radius: 15px;
+    }
+    img:hover{
+        filter: brightness(70%);
+        transition: .5s;
+    }
+    .icons{
+        width: 80%;
+        height: 45px;
+        filter: brightness(0%);
+    }
+    .icons:hover{
+        filter: brightness(100%);
+        transition: .2s;
+    }
+
+
+
+</style>
+<div class="container-fluid first">
+<div class="container bg-light ">
+    <div style="text-align: center; font-size: 30px">
+        As <span style="color: orange">Seen in</span>
+    </div>
+    <br>
+    <div class="row">
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/b.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/boo.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/f.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/ab.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/e.png' %}" class="icons"></a>
+        </span>
+        <span class="col-md-2">
+            <a href="#"><img src="{% static 'images/i.png' %}" class="icons"></a>
+        </span>
+    </div>
+
+<div class="container-fluid bg-light">
+<div class="container mt-lg-5">
+    <div class="row">
+        <span class="col-md-6 first-part">
+            <img src="{% static 'images/insta-2.jpg' %}" class="img-fluid shadow images last-image">
+        </span>
+        <span class="col-md-6 first-part">
+             <i class="fas fa-quote-left"> </i><br><br>
+                    Nep-Stay not only facilitated us on our trip, but also
+                    behaved as a family. Nepalese are great at worshipping
+                    visitors. They never gave  feeling that we are staying on
+                    someone other's property.
+                    <br><br>
+                    <b> Edward Jones.</b>
+        </span>
+    </div>
+</div>
+
+<div class="container first-part">
+    <div class="row ">
+        <span class="col-md-6">
+             <i class="fas fa-quote-left"> </i><br><br>
+                    My husband and I loved our time at Nep-Stay!
+                    It gave us a glimpse into life in rural Nepal
+                    and allowed us to experience the culture in a
+                    meaningful way while building real relationships
+                    with community members.<br><br>
+                    <b> Sarah Hascelschwardt. </b>
+        </span>
+
+        <span class="col-md-6">
+            <img src="{% static 'images/c1.jpeg' %}" class="img-fluid shadow images" >
+        </span>
+    </div>
+</div>
+
+<div class="container first-part">
+    <div class="row ">
+        <span class="col-md-6">
+            <img src="{% static 'images/insta-3.jpg' %}" class="img-fluid shadow images" >
+        </span>
+        <span class="col-md-6">
+             <i class="fas fa-quote-left"> </i><br><br>
+                    I personally experienced Nepalese cultures, norms, beliefs and
+                    lifestyle. Most enjoying part is agriculture. March-April is the
+                    season of paddy here. It's so fun to take a part in this occasion.
+                    I'll surely try this at my home if I'll ever get a chance. <br><br>
+
+                    <b> Kaira Jain </b>
+        </span>
+
+
+    </div>
+</div>
+
+<div class="container first-part">
+    <div class="row ">
+        <span class="col-md-6">
+             <i class="fas fa-quote-left"> </i><br><br>
+                    The behaviour of peoples here are extraordinary. We were treated as gods.
+                    They have a slogan which says, <i>Attithi Debo bhawa (अतिथिदेवो भव:)</i> which says
+                    guests are equivalent to gods. Their this habit impressed me totally. They everytime
+                    bow their head saying 'Namaskar'. This is truly amazing experiencs.
+                    <br><br>
+                    <b> Robin Williams. </b>
+        </span>
+
+        <span class="col-md-6">
+            <img src="{% static 'images/insta-4.jpg' %}" class="img-fluid shadow images" >
+        </span>
+    </div>
+</div>
+
+</div>
+
+
+{% endblock %}
