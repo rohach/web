@@ -10,7 +10,7 @@
     <link rel="stylesheet"
           href="{% static 'css/animate.css'%}">
     <link rel="stylesheet"
-          href="{% static 'css/font-awasome.min.css'%}">
+          href="{% static 'css/font-awesome.min.css'%}">
     <link rel="stylesheet"
           href="{% static 'css/iconicons.min.css'%}">
     <link rel="stylesheet"
@@ -30,47 +30,24 @@
     <link rel="stylesheet"
           href="{% static 'js\jquery-migrate-3.0.0.js'%}">
     <link rel="stylesheet"
-              href="{% static 'js\magnific-popup-options.js'%}">
+          href="{% static 'js\magnific-popup-options.js'%}">
 
 
     <meta charset="UTF-8">
-
     <style>
-    .foot{
-        margin-top: 50px;
-        padding: 20px;
-    }
-    ul{
-        list-style: none;
-        padding: 5px;
-    }
-    .last{
-        background-color: black;
-        color: #95999c;
-        font-family: Arial;
-    }
-    ul li a{
-        text-decoration: none !important;
-        color: lightgray;
-        list-style: none;
-    }
-    ul li a:hover{
-        color: white;
-    }
-    .icons{
-        filter: brightness(65%);
-    }
-    .icons:hover{
-        transition: .2s;
-        filter: brightness(100%);
-    }
-    .icons a{
-        text-decoration: none;
-    }
-    .icns{
-        text-align: center;
-    }
+        ul li a{
+            list-style: none !important;
+            text-decoration: none !important;
+            color: darkgray; !important;
+        }
+        ul li a:hover{
+            color: white;
+        }
+        .text{
+            color: darkgray;
+        }
     </style>
+
 </head>
 <body>
 
@@ -82,56 +59,49 @@
 
 
     <footer>
-    <div class="container foot last">
+        <div class="container-fluid bg-dark">
+        <div class="container bg-dark">
             <div class="row">
-                <span class="col-md-4 ">
-                     <ul class="first-div text-justify">
-                        <li><h3><b style="color: white">COMPANY</b></h3></li>
-                         <li><a href="#">About US</a></li>
-                         <li><a href="#">Impact Report</a></li>
-                         <li><a href="#">Why Host</a></li>
-                         <li><a href="#">Volunteer with us</a></li>
-                         <li><a href="#">Blog</a></li>
-                         <li><a href="#">Contact</a></li>
-                    </ul>
-                    </span>
-                </span>
-                <span class="col-md-4 ">
-                    <ul class="second-div text-justify">
-                        <li><h3 style="color: white">Discover</h3></li>
-                        <li> <a href="#">Homestays</a></li>
-                        <li><a href="#">Experiences</a></li>
-                        <li><a href="#">Circuits</a></li>
-                        <li><a href="#">About us</a></li>
-                    </ul>
-                </span>
-                    <span class="col-md-4 ">
-                    <ul class="third-div text-justify">
-                        <li><h3 style="color: white">CONNECT</h3></li>
-                        <li class="fa fa-map-marker"> Kamane-7, Hetauda <br> 44100</li><br>
-                        <li class="fa fa-phone"> +977-01-4455116 <br>
-                            9868828760 </li>
-                        <li>For further more details, please visit <br>
-                        <a href="#">info@nepstay.com</a></li>
-                    </ul>
-                </span>
-                <div class="col-md-3 ">
-                    <ul class="fourth-div text-justify">
-                        <li><h3 style="color: white">Contact us</h3></li>
-                        <span class="fab fa-facebook mr-4 icons" style="color: blue">  </span>
-                        <span class="fab fa-instagram mr-4 icons" style="color: pink">  </span>
-                        <span class="fab fa-youtube mr-4 icons" style="color: red">  </span>
-                        <span class="fab fa-twitter mr-4 icons" style="color: skyblue">  </span>
+                <div class="col-md-6">
+                    <h1 class="mt-5" style="color: white">ABOUT US</h1>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'booking' %}">Booking</a></li>
+                            <li><a href="{% url 'experiences' %}">Experiences</a></li>
+                            <li><a href="{% url 'impact' %}">Impact</a></li>
+                            <li><a href="{% url 'about' %}">About us</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="mt-lg-5 text">
+                        <li> <h5>Email </h5></li>  <i class="fas fa-arrow-circle-right"></i>  info@nepstay.com
+                        <li class="mt-2"> <h5>Phone</h5></li>  <i class="fas fa-arrow-circle-right"></i>  9868828760
+                        <li class="mt-2"> <h5>Address</h5></li>  <i class="fas fa-arrow-circle-right"></i>  Kamane - 7 <br> Hetauda, Nepal <img src="{% static 'images/nepal.png' %}"
+                                                                 height="13" width="12">
+
                     </ul>
                 </div>
+                <div class="col-md-3 ">
+                    <ul class="mt-lg-5">
+                        <img src="{% static 'images/icon.png' %}" style="height: 150px; width: 60%; align-items: center">
+                        <div>
+                            <a href="#"><i class="fab fa-facebook mr-4" style="color: blue"></i></a>
+                            <a href="#"><i class="fab fa-instagram mr-4" style="color: pink"></i></a>
+                            <a href="#"><i class="fab fa-twitter mr-4" style="color: skyblue"></i></a>
+                            <a href="#"><i class="fab fa-youtube mr-4" style="color: red"></i></a>
+                        </div>
 
-       </div>
-    </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
-<!--    {% include 'footer.html' %}-->
+
 </html>
 
 

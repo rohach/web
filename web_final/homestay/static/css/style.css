@@ -1,7 +1,4 @@
-/*.rohan{*/
-/*    background-color: #e8f4f7;*/
-/*    color: #c3e6cb;*/
-/*}*/
+
 .travel{
     background-color: #1fa12e;
     color: white;
@@ -28,22 +25,14 @@
 .images{
     border-radius: 15px;
 }
-img:hover{
+images:hover{
     filter: brightness(70%);
     transition: .5s;
 }
-.icons{
-    width: 80%;
-    height: 45px;
-    filter: brightness(0%);
-}
-.icons:hover{
-    filter: brightness(100%);
-    transition: .2s;
-}
+
 .foot{
-        margin-top: 50px;
-        padding: 20px;
+    margin-top: 50px;
+    padding: 20px;
 }
 ul{
     list-style: none;
@@ -54,38 +43,62 @@ ul{
     color: #95999c;
     font-family: Arial;
 }
-ul li a{
-    text-decoration: none !important;
-    color: lightgray;
-    list-style: none;
-}
-ul li a:hover{
-    color: white;
-}
-.icons{
-    filter: brightness(65%);
-}
-.icons:hover{
-    transition: .2s;
-    filter: brightness(100%);
-}
-.icons a{
-    text-decoration: none;
-}
-.icns{
-    text-align: center;
-}
+
 
 body {
     /*background-color: #7B1FA2;*/
 }
 .images{
-height: 80vh;
+    height: 80vh;
 }
 .imagess{
-    border-radius: 20px;
+    border-radius: 50px;
 }
 .imagess:hover{
-    filter: brightness(70%);
+    filter: brightness(10%);
     transition: .5s;
 }
+.footer-test{
+    margin-top: 100px;
+}
+.footer-head{
+    margin-top: 40px;
+}
+/*ul li a{*/
+/*    text-decoration: none !important;*/
+/*    color: gray !important;*/
+/*    list-style: none;*/
+/*}*/
+/*ul li a:hover{*/
+/*    color: white !important;*/
+/*}*/
+.icons{
+    filter: brightness(50%);
+}
+.icons:hover{
+    filter: brightness(100%);
+    transition: .3s;
+}
+.about{
+    color: #c82333;
+}
+.back_image{
+    width: 100% !important;
+}
+.back_image{
+        width: 100% !important;
+        filter: brightness(50%);
+        height: 90vh;
+    }
+
+    /* Centered text */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+.login-box{
+        text-align: center !important;
+        background-color: grey !important;
+    }

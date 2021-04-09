@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+
+
+{% block content %}
+<div>
+    <div class="container login-box bg-light">
+        <h1>Welcome to NEPSTAY.</h1>
+        <h2 style="margin-top: 20px">Please login to continue.</h2>
+        <form method="post"  style="margin-top: 50px;">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit" class="bg-success">Log In</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

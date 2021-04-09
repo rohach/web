@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+        <p><img src="{{ room.image_URL }}" alt=""></p>
+        <p>{{ object.name }}</p>
+        <p>{{ object.price }}</p>
+        <p><b>{{ object.digital }}</b></p>
+{#             {% if user.is_staff %}#}
+            <a href="{% url 'update' room.pk %}"><button class="btn btn-success"> Update </button></a>
+            <a href="{% url 'delete' room.pk %}"><button class="btn btn-success"> Delete </button></a>
+{#             {% endif %}#}
+</div>
+{% endblock content %}

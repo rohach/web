@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Experiences</title>
+{% endblock %}
+{% block content %}
+<style>
+    .back_image{
+        width: 100% !important;
+        filter: brightness(50%);
+        height: 90vh;
+    }
+
+    /* Centered text */
+    .centered {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family:Comic Sans MS ;
+    }
+    .btn_get_started{
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .btn_get_started:hover{
+        color: green !important;
+        background-color: white;
+        transition: .5s;
+    }
+    .login_janey{
+        list-style: none !important;
+        text-decoration: none !important;
+        color: white;
+    }
+    .login_janey:hover{
+        color: green !important;
+        background-color: white;
+        transition: .5s;
+    }
+</style>
+      <img src="{% static 'images/pach.jpg' %}" class="back_image" alt="Snow" style="width:100%;">
+        <div class="centered">
+            <h1>Welcome</h1>
+            <h3>an <span style="color: orange">ELEGANT</span> place to stay.</h3>
+            <button class="btn-success mt-lg-5 btn_get_started">
+                <a href="{% url 'login' %}" class="login_janey">Get started!</a>
+            </button>
+        </div>
+
+
+{% endblock %}

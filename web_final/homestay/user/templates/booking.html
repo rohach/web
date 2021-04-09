@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container">
+            <h1 style="color: orange; font-family: Comic Sans MS; text-align: center">We give you a legendary welcome,
+                every time you come back.</h1>
+            <a href="{% url 'AddBookingView' %}"><button class="btn btn-success" style="float: right"> Add </button></a>
+        </div>
+    </div>
+     <div class="container bg-light">
+         <div class="row mt-lg-5">
+             <span class="col-md-12">
+                    {% for room in rooms %}
+                        <div class="col-md-12">
+                            <div class="col-lg-lg-12">
+                            <img class="img-thumbnail img-fluid rounded" style="width: 20%; height: 200px" src="{{ room.image_URL }}">
+                            <div class="dabba prod">
+                                <h6><strong>{{ room.name }}</strong></h6>
+                                <hr>
+                                <h4 style="display: inline-block;float: left">${{ room.price|floatformat:2 }}</h4> <br>
+                                <br>
+                                <button data-product={{ room.id }} data-action="add" class="btn btn-outline-secondary add-btn update-cart">
+                                    Book</button>
+                                <a class="btn btn-outline-success" href="{% url 'roomview' room.pk %}">View</a> <br> <br><br> <br><br>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+               </div>
+         </div>
+     </div>
+
+
+
+
+{% endblock content %}
+
+</div>

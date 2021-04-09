@@ -1,66 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <style>
-        .logo{
-            height: 5px;
-            width: 5px;
-        }
-        .navigation{
-            background-color: orange !important;
-        }
-        .navbar{
-            font-weight: bold;
-        }
-        .btns{
-            border: 2px solid;
-            border-color: saddlebrown;
-            border-radius: 25px;
-            padding-left: 30px;;
-            padding-right: 30px;
-        }
-        .btns:hover{
-            background-color: #92CD00;
-            border-color: saddlebrown;
-            transition: .3s;
-            color: white;
-        }
-    </style>
+  <style>
+    .btns{
+      border: 1px solid;
+      border-color: white;
+      border-radius: 10px;
+      padding: 2px;
+      margin-left: 20px;
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Heroic Features - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
 </head>
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <nav class="navbar navbar-expand-lg navbar-light navigation">
-        <a class="navbar-brand" href="http://127.0.0.1:8000/"><b style="color: purple; font-family: Comic Sans MS">NEP <span style="color: red; font-family: Comic Sans MS "> STAY </span></b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="#">NEP STAY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
-
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-<!--          <li class="nav-item">-->
-<!--              <a class="nav-link logo" href="#"><img src="{% static 'images/logo.png' %}"></a>-->
-<!--          </li>-->
-          <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li  class="nav-item">
-              <a class="nav-link" href="#">Booking</a>
-          </li>
-          <li class="nav-item {{activate_experiences}}">
-              <a class="nav-link" href="{% url 'experiences' %}">Experiences</a>
-          </li>
-          <li  class="nav-item">
-              <a class="nav-link" href="{% url 'impact' %}">Impacts</a>
-          </li>
-          <li  class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About us</a>
-          </li>
-          <li  class="nav-item btns">
-              <a class="nav-link" href="#">Sign-in</a>
-          </li>
-          <li  class="nav-item btns">
-              <a class="nav-link" href="#">Sign-up</a>
-          </li>
+          {% if user.is_authenticated %}
+                <li>
+                  <p style="color: white; font-weight: normal"> <span class="fas fa-user" style="color: blue"></span> Hi {{ user.username }}!</p>
+                </li>
+                <li  class="nav-item btns">
+                  <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                </li>
+            {% else %}
+              <li  class="nav-item btns">
+                <a class="nav-link" href="{% url 'login' %}">Sign-in</a>
+              </li>
+              <li  class="nav-item btns">
+                  <a class="nav-link" href="{% url 'signup' %}">Sign-up</a>
+              </li>
+            {% endif %}
         </ul>
-     </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
 
+
+</body>
+
+</html>
